@@ -14,10 +14,11 @@ public class MakeArrays{
         }
         return ar;
     }
+    //Býr til array af öfugt röðuðum tvenndum sem eru raðaðar innbyrðis.
     public static ComparableInt[] makeInternal(int n){
         ComparableInt[] ar = new ComparableInt[2*n];
-        for(int i = 0; i<2*n; i+=2){
-            ar[i] = new ComparableInt(i/2, i%2);
+        for(int i = 0; i<2*n; i++){
+            ar[i] = new ComparableInt((2*n-1-i)/2, i%2);
             };
         return ar;
     }

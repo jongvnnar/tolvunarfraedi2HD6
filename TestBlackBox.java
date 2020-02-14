@@ -1,7 +1,8 @@
 import edu.princeton.cs.algs4.*;
 public class TestBlackBox{
+    //athuga hvort internal sort se rett m.v. makeInternal
     public static boolean checkInternal(ComparableInt[] a){
-        for(int i = 0; i<a.length; i+=2){
+        for(int i = 0; i<a.length-1; i+=2){
             if(a[i].internal > a[i+1].internal) return false;
         }
         return true;
@@ -18,7 +19,7 @@ public class TestBlackBox{
     public static void main(String[] args){
         String a = args[0];
         System.out.println(a);
-        for(int n = 3200; n<12800000; n *= 2){
+        for(int n = 3200; n<1280000; n *= 2){
             ComparableInt[] ar = MakeArrays.makeRandom(n);
             Stopwatch timer = new Stopwatch();
             sort(a, ar);
