@@ -2,7 +2,7 @@ public class MakeArrays{
     public static ComparableInt[] makeRandom(int n){
         ComparableInt[] ar = new ComparableInt[n];
         for(int i = 0; i<n; i++){
-            ComparableInt a = new ComparableInt((int)Math.random()*n);
+            ComparableInt a = new ComparableInt((int)(Math.random()*n));
             ar[i] = a;
         }  
         return ar;
